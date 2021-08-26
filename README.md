@@ -16,7 +16,7 @@
 
 ### How to Use
 1. Once you enter the recipes microsite
-2.Type something in the input search, like "pasta", to look for a recipe
+2. Type something in the input search, like "pasta", to look for a recipe
 3. Click the "Recipe Json" button to open a modal and see the resulting Json and the requested url.
 4. Click on any recipe card to see its ingredients.
 5. Click the "Ingredients Json" button to open a modal and see the resulting Json and the requested url.
