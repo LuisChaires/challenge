@@ -8,9 +8,7 @@
 1. Download the zip project .
 - Click the CODE button (top-right corner).
 2. Unzip the project.
-- Unzip the .zip file.
-- After extract the folder called "challenge-master or challenge", change its name to "recipes" (This is an important step).
-3. Paste this(recipes) folder to your php server projects folder, for instance "c:xampp/htdocs".
+3. Paste the folder to your php server projects folder, for instance "c:xampp/htdocs".
 4. Start your PHP server and go to your browser (Mozilla, Edge, Chrome, etc).
 5. In the addresses bar write "your-host/recipes" for instance "localhost/recipes".
 
