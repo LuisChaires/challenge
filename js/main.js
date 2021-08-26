@@ -1,11 +1,9 @@
-//$( document ).ready(function() {});
-var imageUrl = 'https://spoonacular.com/cdn/ingredients_100x100/';
-var apikey = '4ed5315f6fea454c877d83e1ee80d751';
-
 $(document).on('click' , '.card-recipe', function(){
   	let id = $(this).attr('id');
-  	let url = 'https://api.spoonacular.com/recipes/'
-  			  + id +'/ingredientWidget.json?apiKey=' + apikey;
+  	let url = apiurls.SPOONACULAR.value 
+  			  + id 
+  			  +'/ingredientWidget.json?apiKey='
+  			  + apiurls.APIKEY.value;
   	var myModal = new bootstrap.Modal($('#ingredientsModal'), {
 					  keyboard: false
 					});
@@ -39,27 +37,30 @@ $(document).on('keypress' , '#searchInput', function(event){
 });
 
 function hello(){
-	  	let url = '/recipes/api/Hello.php'
-	  	var ip = self.location.host;
-	  	console.log(ip);
-	  	$.get(url, function( data ) {
-	  		let info = JSON.parse(data);
-			$("#helloBodyModal").empty();
+  	let url = apiurls.HELLO_API.value;
+  	var ip = self.location.host;
+  	console.log(ip);
+  	$.get(url, function( data ) {
+  		let info = JSON.parse(data);
+		$("#helloBodyModal").empty();
 
-			$( "#helloBodyModal" )
-					.append('<p><b>Requested url:</b> '+ ip + url +'<p>'
-						    + '<p><b>Json:</b> </p><pre>'+ JSON.stringify(info, null, " ") +'</pre>'
-							+ '<p><b>Message:</b> '+ info.message +'</p>');
+		$( "#helloBodyModal" )
+				.append('<p><b>Requested url:</b> '+ ip + url +'<p>'
+					    + '<p><b>Json:</b> </p><pre>'+ JSON.stringify(info, null, " ") +'</pre>'
+						+ '<p><b>Message:</b> '+ info.message +'</p>');
 
-		});
+	});
 }
 
 function call() {
 	let query = $("#searchInput").val();
 
 	if(query){
-		let url = 'https://api.spoonacular.com/recipes/complexSearch?query='
-		+ query + '&number=100&limitLicence=true&apiKey=' + apikey;
+		let url = apiurls.SPOONACULAR.value 
+				  +'complexSearch?query='
+				  + query 
+				  + '&number=100&limitLicence=true&apiKey=' 
+				  + apiurls.APIKEY.value;
 
 		$.get(url, function( data ) {
 			console.log(data);
