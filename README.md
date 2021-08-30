@@ -26,5 +26,5 @@
 - One correct, requesting the successful url to a "Hello World".
 - Other 2 requesting wrong URLs, 1 doesn´t have the apikey and the other doesn´t have the correct action.
 3. There a 2 requests to an extenarl API.
-- One requesting a recipe successful.
-- Other doesn´t have the API key added in the URL.
+- One request is a succesful case, requesting a recipe.
+- The other is an error case because it doesn´t have the API key added in the URL.
