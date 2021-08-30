@@ -39,8 +39,8 @@ $(document).on('keypress' , '#searchInput', function(event){
 function hello(){
   	let url = apiurls.HELLO_API.value;
   	var ip = self.location.host;
-  	console.log(ip);
-  	$.get(url, function( data ) {
+
+  	$.post(url, {action: 'hello', apikey: apiurls.APIKEY.value}, function( data ) {
   		let info = JSON.parse(data);
 		$("#helloBodyModal").empty();
 
@@ -63,7 +63,6 @@ function call() {
 				  + apiurls.APIKEY.value;
 
 		$.get(url, function( data ) {
-			console.log(data);
 			$( "#recipe-container" ).empty();
 			$( "#recipeBodyJson" ).empty();
 

@@ -14,6 +14,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/constants.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/unitTesting.js"></script>
   </head>
   <body>
     <div class="card card-custom" style="width: 18rem;">
@@ -31,6 +32,9 @@
       </div>
       <div class="card-body btn-card-body">
         
+      </div>
+      <div class="mb-3">
+        <button id="helloBtn" type="button" class="btn btn-primary json-btn" data-bs-toggle="modal" data-bs-target="#testingModal" onclick="testing()">Unit Test</button>
       </div>
     </div>
 
@@ -106,6 +110,27 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="helloBodyModal" class="modal-body">
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="testingModal" class="modal modal-dialog-scrollable">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Request Tested</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h6>Green border means: success</h6>
+            <h6>Red border means: error</h6>
+            <div id="testingBodyModal" class="modal-body">
 
 
 
